@@ -81,7 +81,7 @@ class Library
 
         // Пошук книг за автором та виведення результатів
         List<Book> result = books.FindAll(book => book.Author.Equals(authorToSearch));
-        if (result != null)
+        if (result.Count >0)
         {
             Console.WriteLine("Books by author:");
             foreach (var book in result)
@@ -103,7 +103,7 @@ class Library
 
         // Пошук книг за назвою та виведення результатів
         List<Book> result = books.FindAll(book => book.Title.Equals(titleToSearch));
-        if (result != null)
+        if (result.Count > 0)
         {
             Console.WriteLine("Books with title " + titleToSearch + " :");
             foreach (var book in result)
